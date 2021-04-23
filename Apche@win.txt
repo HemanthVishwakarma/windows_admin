@@ -1,0 +1,29 @@
+	
+To install an Apache HTTP Server:
+
+Step 1:
+Navigate to Apache Website - (httpd.apache.org)
+Click on "Download" link for the latest stable version
+After being redirect to the download page, Select: "Files for Microsoft Windows"
+Select one of the websites that provide binary distribution (for example: Apache Lounge)
+After being redirect to "Apache Lounge" website (https://www.apachelounge.com/download/), Select: Apache x.x.xx Win64 link
+After downloaded, unzip the file httpd-x.x.xx-Win64-VC15.zip into C:/
+
+Step 2:
+Open a command prompt: Run as Administrator
+Navigate to directory c:/Apache24/bin
+Add Apache as a  Windows Service:  httpd.exe -k install -n "Apache HTTP Server"  
+In the event of the following error follow Step 3 otherwise jump to Step 4: "The program can't start because VCRUNTIME140.dll is missing from your computer. Try reinstalling the program to fix this problem"
+
+
+Step 3:
+At Apache Lounge website, check the section "Apache 2.4 VC15 Windows Binaries and Modules" on the main page
+Download the file from the link vc_redist_x64 (I.e https://aka.ms/vs/15/release/VC_redist.x64.exe)
+Install Visual C++ 2017 files
+Repeat Step 2
+
+
+Step 4:
+Open Windows Services and start Apache HTTP Server
+Open a Web browser and type the  address in the address bar and hit Enter
+It prompted with the message "It works!" 
